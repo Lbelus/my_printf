@@ -6,7 +6,9 @@
 #include <unistd.h>
 #include <limits.h>
 
-#define MAXARGS 5
+
+
+#define MAXARGS 256
 #define OCTAL 8
 #define DECIMAL 10
 #define HEXADECIMAL 16
@@ -14,7 +16,9 @@
 //prints
 int my_printf(char *fmt,...);
 //void conversion_specifier(char *fmt, char *p, va_list ap, int i, unsigned int u);
+//void conversion_specifier(char *fmt, va_list ap);
 void conversion_specifier(char *fmt, va_list ap);
+int base_id(char *fmt);
 
 //puts
 void my_putchar(char c);
@@ -28,6 +32,6 @@ char* unsigned_itoa(unsigned long int value, char* result, int base);
 unsigned long int wrap_arround(unsigned int i);
 //string
 int my_strlen(char *s);
-
+void my_revswap(char *ptr, char*ptr1, char tmp_char);
 
 #endif

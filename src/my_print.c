@@ -20,16 +20,12 @@ int my_printf(char *fmt,...){
                     my_putstr(p);
                 break;
                 case 'd':
-                    my_putint(i, ap, p, DECIMAL);
+                    my_putint(i, ap, p, base_id(fmt));
                 break;
                 case 'o':
-                    my_putuint(u, ap, p, OCTAL);
-                break;
                 case 'u':
-                    my_putuint(u, ap, p, DECIMAL);
-                break;
                 case 'x':
-                    my_putuint(u, ap, p, HEXADECIMAL);
+                    my_putuint(u, ap, p, base_id(fmt));
                 break;
             }
         } else {
