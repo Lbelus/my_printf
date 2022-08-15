@@ -1,0 +1,9 @@
+char *my_strncpy(char *dest, char *src, int len){
+  
+  int index = 0;
+  while(index < len){
+    dest[index] = src[index];
+    index++;
+  }
+  return dest;
+}

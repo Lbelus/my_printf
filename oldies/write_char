@@ -1,0 +1,13 @@
+#include "../include/header.h"
+#include <stdio.h>
+
+int write_char(int state, int ptr_no, int n_ptrs, char **array ){
+    //int offset = 0;
+    int offset = ptr_no;
+    if (state == STATE_CHAR){
+        write(1, "|1", 2);
+        //printf("%i",offset);
+    } 
+    //arg_parse(n_ptrs, array, 4);
+    return offset;
+}
