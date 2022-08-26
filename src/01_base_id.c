@@ -1,6 +1,6 @@
 #include "../include/header.h"
-
-int base_id(char *fmt){
+//identify base for itoa with corresponding *fmt. 
+int base_id(char *fmt) {
 
     switch(*fmt){
         case 'd':
@@ -13,6 +13,7 @@ int base_id(char *fmt){
             return DECIMAL;
         break;
         case 'x':
+        case 'p':
             return HEXADECIMAL;
         break;
     }

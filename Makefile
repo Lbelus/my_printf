@@ -15,9 +15,15 @@ CFLAGS = -g3 -fsanitize=address -Wall -Wextra -Werror
 #-1m says to link in libm
 #LDFLAGS = -1m
 
+#LDFLAGS :=
+#C_SOURCES :=$(wildcard *.c)
+#C_EXECUTABLE :=$(C_SOURCES:.c=)
+
+
 # list files that are parts of the project 
 
 SOURCES = *.c src/*.c
+#SOURCES = main.c
 
 
 OBJECTS = $(SOURCES:.c)
@@ -29,17 +35,26 @@ TARGET = my_printf
 # assume that it depend on all the named objects files. 
 
 $(TARGET) :
-	$(CC)  $(SOURCES) -o $@ $^ $(CFLAGS)   
+	$(CC)  $(SOURCES) -o $@ -I  $^ $(CFLAGS)   
 
+#$(CC)  $(SOURCES) -o $@ $^ $(CFLAGS)
 #phony means not a real target, it doesn't build anything
 #the phony target clean is used to remove all compiled object files.
+
+#.PHONY: all
+
+#all:$(C_EXECUTABLE) $(CPP_EXECUTABLE)
+#	$(C_EXECUTABLE):$(C_SOURCES)
+#		$(CC) $< $(LDFLAGS) $(CFLAGS) -o $@
+
 
 .PHONY: fclean
 
 fclean:
-	@rm -f $(TARGET) $(OBJECTS) core 
-
+	rm -f $(TARGET) $(OBJECTS) 
+	rm -f a.out
 .PHONY: run
 
 run:
 	@./$(TARGET) 
+

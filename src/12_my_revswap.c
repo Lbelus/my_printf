@@ -1,4 +1,5 @@
 #include "../include/header.h"
+
 void my_revswap(char *ptr, char*ptr1, char tmp_char){
     while(ptr1 < ptr) {
 		tmp_char = *ptr;

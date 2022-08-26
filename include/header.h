@@ -6,30 +6,29 @@
 #include <unistd.h>
 #include <limits.h>
 
-
-
-#define MAXARGS 256
+#define MAXARGS 3  // USER DEFINE, LIMIT NUMBER OF ARGS GOING THROUGH TO LIMIT READ MEMORY EXPLOIT 
 #define OCTAL 8
 #define DECIMAL 10
 #define HEXADECIMAL 16
 
 //prints
 int my_printf(char *fmt,...);
-//void conversion_specifier(char *fmt, char *p, va_list ap, int i, unsigned int u);
-//void conversion_specifier(char *fmt, va_list ap);
-void conversion_specifier(char *fmt, va_list ap);
 int base_id(char *fmt);
 
 //puts
-void my_putchar(char c);
-void my_putstr(char *string);
-void my_putint(int i, va_list ap, char *p, int base);
-void my_putuint(unsigned int u, va_list ap, char *p, int base);
+int my_putchar(char c);
+int my_putstr(char *string);
+int my_putint(int i, va_list ap, char *p, int base);
+int my_putuint(unsigned int u, va_list ap, char *p, int base);
+int my_putaddr(long long x, va_list ap, char *p, int base);
+int my_putesc(void);
 
 //int
 char* their_itoa(int value, char* result, int base);
-char* unsigned_itoa(unsigned long int value, char* result, int base); 
 unsigned long int wrap_arround(unsigned int i);
+char* unsigned_itoa(unsigned long int value, char* result, int base); 
+char* itoa_long_long(long long value, char* result, int base);
+
 //string
 int my_strlen(char *s);
 void my_revswap(char *ptr, char*ptr1, char tmp_char);
