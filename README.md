@@ -101,20 +101,17 @@ To test ``my_printf`` :
 to use my_printf inside your main you can follow next exemple :
 
 ```c
-char t1 = 97;
-    char t2[] = "This is a test @99, oh my! it do go down!";
-    int t3 = -25;
-    unsigned int t4 = -16;
-    unsigned int t5 = -10;
-    unsigned int t6 = -100;
-    void *t7 = "aaaaa";
-    void *t8 = "aaaaa";
-    int f = 0;
-    int g = 0;
-
-
-   
-       my_printf("my_printf : char : %c,\n string : %s,\n deci : %d,\n octa : %o,\n un : %u,\n ex : %x,\n void : %p,\n void : %p,\n", t1, t2, t3, t4, t5, t6, t7, t8);
+  char t1 = 97;
+  char t2[] = "This is a test @99, oh my! it do go down!";
+  int t3 = -25;
+  unsigned int t4 = -16;
+  unsigned int t5 = -10;
+  unsigned int t6 = -100;
+  void *t7 = "aaaaa";
+  void *t8 = "aaaaa";
+  int f = 0;
+  int g = 0;
+  my_printf("my_printf : char : %c,\n string : %s,\n deci : %d,\n octa : %o,\n un : %u,\n ex : %x,\n void : %p,\n void : %p,\n", t1, t2, t3, t4, t5, t6, t7, t8);
 ```
 
 ### The Core Team
