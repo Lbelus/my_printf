@@ -9,7 +9,8 @@ CC = gcc
 # -std=c99 use the c99 standard language defintion
 # -Wextra enables extra warnings flag
 # -Werror make all warning into error
-CFLAGS = -g3 -fsanitize=address -Wall -Wextra -Werror 
+#CFLAGS = 
+#-g3 -fsanitize=address -Wall -Wextra -Werror 
 
 # LDFLAGS sets flags for linker
 #-1m says to link in libm
@@ -35,7 +36,7 @@ TARGET = my_printf
 # assume that it depend on all the named objects files. 
 
 $(TARGET) :
-	$(CC)  $(SOURCES) -o $@ -I  $^ $(CFLAGS)   
+	$(CC)  $(SOURCES) -o $@ -IC  $^ $(CFLAGS)   
 
 #$(CC)  $(SOURCES) -o $@ $^ $(CFLAGS)
 #phony means not a real target, it doesn't build anything

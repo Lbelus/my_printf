@@ -3,9 +3,9 @@
 int my_putint(int i, va_list ap, char *p, int base) {
     int len = 0;
     i = va_arg(ap, int);
-    p = malloc(sizeof(char)*(my_strlen(p)+100));
+    p = malloc(sizeof(char)*(my_strlen(p)));
     their_itoa(i, p, base);
-    len += my_putstr(p);
+    len += my_puts(p);
     free(p);
     return len;
 }

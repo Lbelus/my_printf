@@ -9,20 +9,20 @@ int my_printf(char * restrict format, ...) {
     va_list ap;
     va_start(ap, format); //declare object ap of va_list type // must invoke before accessing va_arg
     
-    while (*format){
-        if(*format == '%'){ 
+    while (*format) {
+        if(*format == '%') { 
             format++; //change ptr position
             n_ptrs++; //update nbr of args passed trough function.  
-            switch(*format){
+            switch(*format) {
                 case 'c':
                    len += my_putchar(va_arg(ap, int)); // each call of va_vargs modify ap
                 break;
                 case 's':
                     p = va_arg(ap, char *); //store string value on pointer 
                     if(p) {
-                        len += my_putstr(p);
+                        len += my_puts(p);
                     } else {
-                        len+= my_putstr("(null)");
+                        len += my_puts("(null)");
                     }
                 break;
                 case 'd':

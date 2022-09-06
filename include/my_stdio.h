@@ -18,6 +18,7 @@ int base_id(char *fmt);
 //puts
 int my_putchar(char c);
 int my_putstr(char *string);
+int my_puts(char* str);
 int my_putint(int i, va_list ap, char *p, int base);
 int my_putuint(unsigned int u, va_list ap, char *p, int base);
 int my_putaddr(long long x, va_list ap, char *p, int base);
