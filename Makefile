@@ -22,7 +22,7 @@ CFLAGS = -g3 -fsanitize=address -Wall -Wextra -Werror
 
 # list files that are parts of the project 
 
-SOURCES = *.c src/*.c
+SOURCES = *.c src/*.c src/*/*.c
 #SOURCES = main.c
 
 

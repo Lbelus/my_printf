@@ -1,4 +1,4 @@
-#include "../include/header.h"
+#include "../../include/my_stdio.h"
 
 int my_strlen(char *string) {
   int len = 0;

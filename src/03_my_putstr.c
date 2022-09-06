@@ -1,4 +1,4 @@
-#include "../include/header.h"
+#include "../include/my_stdio.h"
 //write() string
 int my_putstr(char *string) {
     int len = 0;

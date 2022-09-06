@@ -1,6 +1,4 @@
-
-#include <stdlib.h>
-#include "../include/header.h"
+#include "../../include/my_stdio.h"
 
 int my_printf(char * restrict format, ...) {
     int n_ptrs = 0, i = 0, len = 0; 

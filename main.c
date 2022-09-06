@@ -1,5 +1,5 @@
-#include "include/header.h"
-#include <stdio.h>
+#include "include/my_stdio.h"
+//#include <stdio.h>
 
 int main(void){
     
@@ -12,12 +12,12 @@ int main(void){
     void *t7 = "aaaaa";
     void *t8 = "aaaaa";
     int f = 0;
-    int g = 0;
+    //int g = 0;
 
 
     for(int i =0; i < 100;i++){
         f +=  my_printf("my_printf : char : %c,\n string : %s,\n deci : %d,\n octa : %o,\n un : %u,\n ex : %x,\n void : %p,\n void : %p,\n", t1, t2, t3, t4, t5, t6, t7, t8);
-        g += printf("QQQprintf : char : %c,\n string : %s,\n deci : %d,\n octa : %o,\n un : %u,\n ex : %x,\n void : %p,\n void : %p,\n", t1, t2, t3, t4, t5, t6, t7, t8);
+    //    g += printf("QQQprintf : char : %c,\n string : %s,\n deci : %d,\n octa : %o,\n un : %u,\n ex : %x,\n void : %p,\n void : %p,\n", t1, t2, t3, t4, t5, t6, t7, t8);
     }
     
     //char t2[] = "T";
@@ -38,6 +38,6 @@ int main(void){
     //g += printf("NULL STRING %s!\n", (char*)NULL);
 
     my_printf("%d ", f);
-    printf("%d ", g);
+    //printf("%d ", g);
     return 0;
 }
