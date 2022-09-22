@@ -1,5 +1,5 @@
-//#include "include/my_stdio.h"
-#include <stdio.h>
+#include "include/my_stdio.h"
+//#include <stdio.h>
 
 int main(void){
     
@@ -11,13 +11,13 @@ int main(void){
     unsigned int t6 = -100;
     void *t7 = "aaaaa";
     void *t8 = "aaaaa";
-    //int f = 0;
-    int g = 0;
+    int f = 0;
+    //int g = 0;
 
 
     for(int i =0; i < 100;i++){
-       // f +=  my_printf("my_printf : char : %c,\n string : %s,\n deci : %d,\n octa : %o,\n un : %u,\n ex : %x,\n void : %p,\n void : %p,\n", t1, t2, t3, t4, t5, t6, t7, t8);
-        g += printf("QQQprintf : char : %c,\n string : %s,\n deci : %d,\n octa : %o,\n un : %u,\n ex : %x,\n void : %p,\n void : %p,\n", t1, t2, t3, t4, t5, t6, t7, t8);
+        f +=  my_printf("my_printf : char : %c,\n string : %s,\n deci : %d,\n octa : %o,\n un : %u,\n ex : %x,\n void : %p,\n void : %p,\n", t1, t2, t3, t4, t5, t6, t7, t8);
+        //g += printf("QQQprintf : char : %c,\n string : %s,\n deci : %d,\n octa : %o,\n un : %u,\n ex : %x,\n void : %p,\n void : %p,\n", t1, t2, t3, t4, t5, t6, t7, t8);
     }
 
     //my_puts(t2);
@@ -41,7 +41,7 @@ int main(void){
     //f += my_printf("NULL STRING %s!\n", (char*)NULL); 
     //g += printf("NULL STRING %s!\n", (char*)NULL);
 
-    //my_printf("%d ", f);
-    printf("%d ", g);
+    my_printf("%d ", f);
+    //printf("%d ", g);
     return 0;
 }

@@ -6,7 +6,8 @@
 #include <unistd.h>
 #include <limits.h>
 
-#define MAXARGS 3  // USER DEFINE, LIMIT NUMBER OF ARGS GOING THROUGH TO LIMIT READ MEMORY EXPLOIT 
+#define MAXARGS 256  // USER DEFINE, LIMIT NUMBER OF ARGS GOING THROUGH TO LIMIT READ MEMORY EXPLOIT
+#define BUFFSIZELIMIT 512
 #define OCTAL 8
 #define DECIMAL 10
 #define HEXADECIMAL 16
@@ -33,5 +34,5 @@ char* itoa_long_long(long long value, char* result, int base);
 //string
 int my_strlen(char *s);
 void my_revswap(char *ptr, char*ptr1, char tmp_char);
-
+char* my_strcat(char* str_dest, char* str_src);
 #endif
